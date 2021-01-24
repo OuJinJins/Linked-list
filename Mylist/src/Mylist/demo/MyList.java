@@ -51,7 +51,7 @@ public class MyList {
         this.size--;
     }
 
-    public void printlist(){
+    public void listShow(){
         Node printNode = this.head;
         System.out.print("输出所有节点：");
         while(printNode != null){
@@ -173,13 +173,13 @@ public class MyList {
     }
 
     public  void  k_To_Last(){
-        Node node1 = new Node();
-        Node node2 = new Node();
+        Node node1 = head;
+        Node node2 = head;
         Scanner input =  new Scanner(System.in);
         System.out.print("要输出的倒数第k个元素数据：");
         int k = input.nextInt();
-        System.out.println();
-        while(k > 0||node2 != null){
+
+        while(k > 0&&node2 != null){
             node2 = node2.next;
             k--;
         }
@@ -203,7 +203,7 @@ public class MyList {
         }
 
         list.reverseList(2,3);
-        list.printlist();
+        list.listShow();
         list.search();
         list.findMid();
         list.isCircle();
